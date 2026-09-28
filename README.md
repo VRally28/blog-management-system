@@ -6,7 +6,8 @@ A lightweight, responsive web application for managing blog posts with full CRUD
 
 - **Full CRUD Support:** Create, read, update, and delete blog posts.
 - **Rich Text Editor:** Integrated CKEditor 4 for formatting article content.
-- **Responsive Interface:** Modern, mobile-friendly UI built with Bootstrap 5 and Bootstrap Icons.
+- **Dedicated Reading View:** View complete articles with titles, timestamps, and formatted content.
+- **Responsive Interface:** Modern, mobile-friendly UI built with Bootstrap 4 and Bootstrap Icons.
 - **Secure Queries:** Parameterized MySQLi prepared statements to protect against SQL injection.
 - **Zero Local Dependencies:** Uses CDN links for fast loading and low repository footprint.
 
@@ -14,7 +15,7 @@ A lightweight, responsive web application for managing blog posts with full CRUD
 
 - **Backend:** PHP 8+
 - **Database:** MySQL
-- **Frontend:** Bootstrap 5, Bootstrap Icons, CKEditor 4
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap 4, Bootstrap Icons, CKEditor 4
 
 ## Project Structure
 
@@ -26,6 +27,7 @@ blogms/
 ├── database.sql
 ├── del.php
 ├── index.php
+├── view.php
 └── README.md
 ```
 

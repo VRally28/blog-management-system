@@ -28,7 +28,7 @@ if (!$result) {
 
     <title>Blog Management System</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
@@ -39,11 +39,11 @@ if (!$result) {
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm rounded px-3 mb-4">
 
-        <a class="navbar-brand fw-bold" href="index.php">
+        <a class="navbar-brand font-weight-bold" href="index.php">
             My Blog
         </a>
 
-        <div class="ms-auto">
+        <div class="ml-auto">
 
             <a href="create.php"
                class="btn btn-primary">
@@ -115,11 +115,15 @@ if (!$result) {
 
                             <tr>
 
-                                <td class="fw-semibold">
+                                <td class="font-weight-bold">
 
-                                    <?= htmlspecialchars(
-                                        $row['blog_name']
-                                    ) ?>
+                                    <a href="view.php?id=<?= $row['id'] ?>" class="text-dark font-weight-bold">
+
+                                        <?= htmlspecialchars(
+                                            $row['blog_name']
+                                        ) ?>
+
+                                    </a>
 
                                 </td>
 
@@ -146,8 +150,18 @@ if (!$result) {
                                 <td>
 
                                     <a
+                                        href="view.php?id=<?= $row['id'] ?>"
+                                        class="btn btn-sm btn-outline-info mr-1"
+                                        title="View">
+
+                                        <i class="bi bi-eye"></i>
+
+                                    </a>
+
+
+                                    <a
                                         href="create.php?id=<?= $row['id'] ?>"
-                                        class="btn btn-sm btn-outline-primary me-1"
+                                        class="btn btn-sm btn-outline-primary mr-1"
                                         title="Edit">
 
                                         <i class="bi bi-pencil"></i>
@@ -185,7 +199,8 @@ if (!$result) {
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
